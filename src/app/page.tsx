@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="">
       <FrontPage />
-      <ProductsComponent />
+      <ProductsComponent children={<></>} />
       <Service />
     </main>
   );
