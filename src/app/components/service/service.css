@@ -1,0 +1,57 @@
+.aboutImage {
+  width: 50%;
+  max-height: 100%;
+}
+.serviceContent {
+  width: 38%;
+}
+@media (max-width: 768px) {
+  .serviceContent {
+    width: 90%;
+  }
+  .aboutImage {
+    width: 100%;
+    max-height: 50%;
+  }
+}
+.serviceCard {
+  box-shadow: 0 0 10px 1px rgb(216, 216, 216);
+}
+.customers button {
+  background-color: #3a4468;
+}
+.customers button:hover {
+  background-color: #facc15;
+}
+.customerReview {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: white;
+}
+.reviews {
+  transform: translateX(var(--translate));
+  transition: ease-out 0.7s;
+}
+.comment {
+  box-shadow: 0 0 10px 2px rgb(190, 190, 190);
+}
+.commenter {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #facc15;
+  z-index: 100;
+}
+.commenter::before {
+  content: "";
+  background-color: #facc15;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  width: 75px;
+  height: 75px;
+  z-index: -1;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0% 50%);
+}

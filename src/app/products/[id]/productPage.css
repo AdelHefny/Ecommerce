@@ -1,0 +1,33 @@
+.productsGrid {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: auto auto auto;
+  max-width: 100%;
+}
+@media (max-width: 986px) {
+  .productsGrid {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 786px) {
+  .productsGrid {
+    grid-template-columns: auto;
+  }
+}
+.textSimaler {
+  margin-bottom: 2rem;
+  position: relative;
+  width: fit-content;
+  padding-bottom: 0.6rem;
+}
+.textSimaler::after {
+  content: "";
+  background-color: orange;
+  border: 50%;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  transform: translateX(45%);
+  bottom: 0;
+}

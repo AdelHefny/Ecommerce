@@ -1,0 +1,107 @@
+.productGrid {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: auto auto auto;
+  max-width: 100%;
+}
+@media (max-width: 986px) {
+  .productGrid {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 786px) {
+  .productGrid {
+    grid-template-columns: auto;
+  }
+}
+.productCard:hover .btn {
+  background-color: rgb(255, 255, 255, 0.5);
+  opacity: 1;
+}
+.btn {
+  opacity: 0;
+}
+.btn button {
+  background-color: #3a4468;
+  font-size: 1rem;
+  transition: 300ms;
+}
+.btn a {
+  background-color: rgb(250 204 21);
+  font-size: 1rem;
+  transition: 300ms;
+}
+.btn a:hover {
+  background-color: rgb(219, 175, 0);
+}
+.btn button:hover {
+  background-color: rgb(250 204 21);
+}
+.star {
+  clip-path: polygon(
+    50% 2.45%,
+    61.8% 38.77%,
+    100% 38.77%,
+    69.1% 61.23%,
+    80.9% 97.55%,
+    50% 75.1%,
+    19.1% 97.55%,
+    30.9% 61.23%,
+    0% 38.77%,
+    38.2% 38.77%
+  );
+  width: 20px;
+  height: 20px;
+  background-image: linear-gradient(to right, white 100%, black 0%);
+}
+.smallStar {
+  clip-path: polygon(
+    50% 2.45%,
+    61.8% 38.77%,
+    100% 38.77%,
+    69.1% 61.23%,
+    80.9% 97.55%,
+    50% 75.1%,
+    19.1% 97.55%,
+    30.9% 61.23%,
+    0% 38.77%,
+    38.2% 38.77%
+  );
+  width: 20px;
+  height: 20px;
+  background-color: black;
+}
+.yellowStarhalf {
+  clip-path: polygon(
+    50% 2.45%,
+    61.8% 38.77%,
+    100% 38.77%,
+    69.1% 61.23%,
+    80.9% 97.55%,
+    50% 75.1%,
+    19.1% 97.55%,
+    30.9% 61.23%,
+    0% 38.77%,
+    38.2% 38.77%
+  );
+  width: 20px;
+  height: 20px;
+  background-image: linear-gradient(to right, yellow 50%, white 50%);
+}
+.yellowStar {
+  clip-path: polygon(
+    50% 2.45%,
+    61.8% 38.77%,
+    100% 38.77%,
+    69.1% 61.23%,
+    80.9% 97.55%,
+    50% 75.1%,
+    19.1% 97.55%,
+    30.9% 61.23%,
+    0% 38.77%,
+    38.2% 38.77%
+  );
+  width: 20px;
+  height: 20px;
+  background-image: linear-gradient(to right, yellow 100%, black 0%);
+}

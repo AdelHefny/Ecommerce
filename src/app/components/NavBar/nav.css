@@ -1,0 +1,18 @@
+@media (min-width: 0px) {
+  .upperNav {
+    grid-template-areas:
+      "menu"
+      "search";
+    align-items: center;
+    justify-content: center;
+  }
+  .search {
+    grid-area: search;
+  }
+  .upperNav:nth-last-child(1) {
+    grid-area: menu;
+  }
+}
+.cartToolTipTranslateY {
+  transform: translateY(-150%);
+}
