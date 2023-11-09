@@ -1,6 +1,9 @@
 .btn:hover {
   background-color: #f7f7f7;
 }
+.homePage {
+  height: 130vh;
+}
 .homePage img {
   max-width: 100%;
   max-height: 100%;
