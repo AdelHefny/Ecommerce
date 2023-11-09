@@ -45,6 +45,7 @@ function SearchBar() {
             searchBtn.current?.click();
             if (input.current) {
               input.current.value = "";
+              searchResults.current?.classList.add("hidden");
             }
           }
         }}

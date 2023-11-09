@@ -47,7 +47,7 @@ function WhyChooseUsComponent() {
         ))}
       </section>
       <section className="w-full relative customers flex flex-col items-center justify-center space-y-7 py-20">
-        <h1 className="font-extrabold text-4xl text-center">
+        <h1 className="font-extrabold text-center" style={{ fontSize: "36px" }}>
           What Says Our Customers
         </h1>
         <div className="overflow-x-hidden w-full min-h-96">

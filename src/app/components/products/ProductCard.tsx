@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import Stars from "@/app/images/noun-five-star-review-446618.svg";
 import Link from "next/link";
+import CartMessage from "./cartMessage";
 
 type productCardDataProps = {
   productData: productData;
@@ -80,29 +81,16 @@ function ProductCard({ productData }: productCardDataProps) {
               <div className="star absolute top-0 left-0"></div>
             </div>
           </div>
-          <div
-            className="fixed opacity-0 transition duration-300 rounded-lg bottom-4 right-2 bg-green-700 py-4 z-50 text-white flex items-center justify-between"
-            ref={message}
-          >
+          <CartMessage message={message} />
+          <div className="btn font-bold flex-col space-y-1 flex items-center justify-center absolute top-0 w-full h-3/4 duration-200 transition">
             <button
-              className="px-4"
-              onClick={() => {
-                message.current?.classList.add("hidden");
-              }}
-            >
-              <FontAwesomeIcon icon={faXmark} />
-            </button>
-            <h1 className="px-4">Item Added Successfully</h1>
-          </div>
-          <div className="btn flex-col space-y-1 flex items-center justify-center absolute top-0 w-full h-3/4 duration-200 transition">
-            <button
-              className="px-4 py-2 w-44 rounded-md text-white"
+              className="px-4 py-2 w-44 rounded-md text-slate-800"
               onClick={handleAdding}
             >
               Add To Cart
             </button>
             <Link
-              className="px-4 text-center py-2 w-44 rounded-md bg-yellow-500 text-white"
+              className="px-4 text-center py-2 w-44 rounded-md bg-orange-400 hover:bg-orange-500 text-slate-800"
               href={`/products/${productData.id}`}
             >
               View Product

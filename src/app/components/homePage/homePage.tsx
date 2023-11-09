@@ -29,7 +29,7 @@ function FrontPage() {
   return (
     <section
       style={{ backgroundColor: "#f7f7f7" }}
-      className=" md:h-full md:p-10 sm:py-8 homePage relative"
+      className="md:p-10 sm:py-8 homePage relative"
     >
       <section ref={frontProductSection} className="duration-300 transition">
         <ProductPreview frontProduct={frontProducts[product]} />

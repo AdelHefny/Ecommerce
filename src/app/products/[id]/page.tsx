@@ -1,13 +1,19 @@
 "use client";
 import { products } from "@/app/components/products/data";
 import Image from "next/image";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useContext } from "react";
 import "../../components/products/products.css";
 import "@/app/globals.css";
 import "./productPage.css";
 import "@/app/components/products/products.css";
-import { productData } from "@/app/components/products/CartProducts";
+import {
+  CartProductsContext,
+  productData,
+} from "@/app/components/products/CartProducts";
 import ProductCard from "@/app/components/products/ProductCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import CartMessage from "@/app/components/products/cartMessage";
 
 function ProductPage({ params }: { params: any }) {
   let ourProduct;
@@ -18,6 +24,18 @@ function ProductPage({ params }: { params: any }) {
   }
   const stars = useRef<HTMLDivElement>(null);
   const [simalerProducts, setSimalerProducts] = useState<productData[]>([]);
+  const [cartProducts, cartSetter] = useContext(CartProductsContext);
+  const message = useRef<HTMLDivElement>(null);
+  const handleAdding = async () => {
+    cartSetter(ourProduct, false);
+    message.current?.classList.remove("opacity-0");
+    message.current?.classList.remove("hidden");
+    await new Promise(() => {
+      setTimeout(() => {
+        message.current?.classList.add("opacity-0");
+      }, 2000);
+    });
+  };
   useEffect(() => {
     let simalerProductsD: productData[] = [];
     for (let i = 0; i < products.length; i++) {
@@ -54,7 +72,7 @@ function ProductPage({ params }: { params: any }) {
   }, []);
   return (
     <section className="flex flex-col items-center">
-      <section className="mx-10 flex flex-col md:flex-row justify-start md:items-start items-center py-10 space-x-4">
+      <section className="relative mx-10 flex flex-col md:flex-row justify-start md:items-start items-center py-10 space-x-4">
         <div className="sticky w-80 max-w-full p-6">
           <Image
             src={ourProduct.image}
@@ -100,6 +118,24 @@ function ProductPage({ params }: { params: any }) {
             <h1 className="text-xl">{ourProduct.price}$</h1>
             <p>{ourProduct.desctiprion}</p>
           </section>
+        </section>
+        <CartMessage message={message} />
+        <section
+          className="flex flex-col space-y-4 py-2 font-bold
+        "
+        >
+          <button
+            className="px-4 py-2 w-44 rounded-md text-sm text-slate-800 cartBtn"
+            onClick={handleAdding}
+          >
+            Add To Cart
+          </button>
+          <button
+            className="px-4 py-2 w-44 rounded-md text-sm text-slate-800 bg-orange-400 hover:bg-orange-500 transition duration-200"
+            onClick={handleAdding}
+          >
+            Buy Item
+          </button>
         </section>
       </section>
       <h1 className="textSimaler text-xl font-bold text-center">

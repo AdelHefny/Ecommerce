@@ -31,3 +31,11 @@
   transform: translateX(45%);
   bottom: 0;
 }
+.cartBtn {
+  background-color: rgb(250 204 21);
+  font-size: 1rem;
+  transition: 200ms;
+}
+.cartBtn:hover {
+  background-color: rgb(224, 180, 0);
+}

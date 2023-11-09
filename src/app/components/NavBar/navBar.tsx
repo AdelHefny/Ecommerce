@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useRef, useContext, useEffect } from "react";
 import SearchBar from "./components/SearchBar";
 import "./nav.css";
+import "@/app/globals.css";
 import { CartProductsContext } from "../products/CartProducts";
 import CartToolTip from "./components/CartToolTip";
 
@@ -48,7 +49,7 @@ function NavBar() {
   return (
     <nav className=" text-white text-3xl flex flex-col relative z-50">
       <div style={{ backgroundColor: "#434f78" }}>
-        <div className="md:flex md:justify-between sm:justify-center upperNav px-4 flex flex-row items-center  py-2 mx-auto sm:grid">
+        <div className="md:flex md:justify-between upperNav px-4 flex flex-row items-center py-2 mx-auto sm:grid sm:justify-center">
           <section className="flex-row text-sm space-x-2 sm:hidden md:flex">
             <section className="flex flex-row items-center space-x-2 py-4 hover:text-orange-300 cursor-pointer text-lg">
               <FontAwesomeIcon
@@ -119,13 +120,13 @@ function NavBar() {
         </div>
       </div>
       <div
-        className={`px-6 py-4 h- flex flex-col h-16 ${show ? "h-72" : ""}`}
+        className={`px-6 py-4 h- flex flex-col h-16 ${show ? "h-64" : ""}`}
         style={{ backgroundColor: "#3a4468", transition: "400ms" }}
       >
         <div>
           <div className="flex-row justify-between flex">
             <Link href={"/"}>
-              <h1 className="font-bold">Minics</h1>
+              <h1 className="font-bold text-3xl">Minics</h1>
             </Link>
             <ul
               className="flex flex-row space-x-12 px-10 text-lg items-center md:flex sm:hidden"
@@ -168,15 +169,6 @@ function NavBar() {
                   Why Us
                 </Link>
               </li>
-              <li
-                onClick={() => {
-                  handleActive(4);
-                }}
-              >
-                <Link className="hover:text-orange-300" href={"/testimonial"}>
-                  Testimonial
-                </Link>
-              </li>
             </ul>
             <div
               className="w-10 h-8 iconBurger flex items-center justify-center cursor-pointer md:hidden sm:flex"
@@ -209,11 +201,6 @@ function NavBar() {
           <li>
             <Link className="hover:text-orange-300" href={"/whyUs"}>
               Why Us
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:text-orange-300" href={"/testimonial"}>
-              Testimonial
             </Link>
           </li>
         </ul>
