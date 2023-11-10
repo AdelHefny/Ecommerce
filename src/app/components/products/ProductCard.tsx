@@ -43,7 +43,12 @@ function ProductCard({ productData }: productCardDataProps) {
     }
   }, []);
   return (
-    <section className="relative flex flex-col w-72 text-xl font-thin mx-10 productCard">
+    <section
+      className="relative flex flex-col w-72 text-xl font-thin mx-10 productCard cursor-pointer transition duration-200"
+      onClick={() => {
+        location.href = `/products/${productData.id}`;
+      }}
+    >
       <div className="bg-gray-100 w-full h-3/4 items-center flex px-4 py-10 justify-center">
         <Image
           src={productData.image}
@@ -89,12 +94,6 @@ function ProductCard({ productData }: productCardDataProps) {
             >
               Add To Cart
             </button>
-            <Link
-              className="px-4 text-center py-2 w-44 rounded-md bg-orange-400 hover:bg-orange-500 text-slate-800"
-              href={`/products/${productData.id}`}
-            >
-              View Product
-            </Link>
           </div>
         </div>
       </section>

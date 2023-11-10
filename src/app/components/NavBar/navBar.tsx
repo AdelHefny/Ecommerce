@@ -49,7 +49,7 @@ function NavBar() {
   return (
     <nav className=" text-white text-3xl flex flex-col relative z-50">
       <div style={{ backgroundColor: "#434f78" }}>
-        <div className="md:flex md:justify-between upperNav px-4 flex flex-row items-center py-2 mx-auto sm:grid sm:justify-center">
+        <div className="md:flex md:justify-between upperNav px-4 flex flex-row items-center py-2 mx-auto sm:grid ">
           <section className="flex-row text-sm space-x-2 sm:hidden md:flex">
             <section className="flex flex-row items-center space-x-2 py-4 hover:text-orange-300 cursor-pointer text-lg">
               <FontAwesomeIcon
