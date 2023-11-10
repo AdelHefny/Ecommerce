@@ -8,7 +8,10 @@ function ProductsComponent({ children }: { children: React.JSX.Element }) {
     <section>
       <div className="flex flex-col items-center justify-around py-12">
         <section>
-          <h1 className="font-extrabold my-16" style={{ fontSize: "2rem" }}>
+          <h1
+            className="relative font-extrabold my-16 productsTitle"
+            style={{ fontSize: "2rem" }}
+          >
             Our Products
           </h1>
         </section>

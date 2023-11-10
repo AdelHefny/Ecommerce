@@ -87,30 +87,32 @@ function ProductPage({ params }: { params: any }) {
             <h6 className="font-light text-sm text-gray-500">
               {ourProduct.companyName}
             </h6>
-            <div
-              className="flex flex-row items-center justify-center stars "
-              ref={stars}
-            >
-              <p>{ourProduct.rating}</p>
-              <div className="relative">
-                <div className="smallStar"></div>
-                <div className="star absolute top-0 left-0"></div>
-              </div>
-              <div className="relative">
-                <div className="smallStar"></div>
-                <div className="star absolute top-0 left-0"></div>
-              </div>
-              <div className="relative">
-                <div className="smallStar"></div>
-                <div className="star absolute top-0 left-0"></div>
-              </div>
-              <div className="relative">
-                <div className="smallStar"></div>
-                <div className="star absolute top-0 left-0"></div>
-              </div>
-              <div className="relative">
-                <div className="smallStar"></div>
-                <div className="star absolute top-0 left-0"></div>
+            <div className="flex flex-row items-center justify-start space-x-1">
+              <p className="pt-1">{ourProduct.rating}</p>
+              <div
+                className="flex flex-row items-center justify-center stars"
+                ref={stars}
+              >
+                <div className="relative">
+                  <div className="smallStar"></div>
+                  <div className="star absolute top-0 left-0"></div>
+                </div>
+                <div className="relative">
+                  <div className="smallStar"></div>
+                  <div className="star absolute top-0 left-0"></div>
+                </div>
+                <div className="relative">
+                  <div className="smallStar"></div>
+                  <div className="star absolute top-0 left-0"></div>
+                </div>
+                <div className="relative">
+                  <div className="smallStar"></div>
+                  <div className="star absolute top-0 left-0"></div>
+                </div>
+                <div className="relative">
+                  <div className="smallStar"></div>
+                  <div className="star absolute top-0 left-0"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -138,7 +140,7 @@ function ProductPage({ params }: { params: any }) {
           </button>
         </section>
       </section>
-      <h1 className="textSimaler text-xl font-bold text-center">
+      <h1 className="textSimaler text-2xl font-bold text-center">
         Simalar Products
       </h1>
       <section className="grid productsGrid items-center justify-center my-8">

@@ -29,7 +29,7 @@ function Comments({ commentData }: commentProps) {
           <div className="flex flex-col justify-end items-start h-full py-4">
             <h1 className="font-extrabold text-xl">{commentData.name}</h1>
             <p
-              className="font-bold text-yellow-300"
+              className="font-bold text-orange-400"
               style={{ fontSize: "1rem" }}
             >
               {commentData.job}

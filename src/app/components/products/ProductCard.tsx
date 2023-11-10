@@ -60,32 +60,35 @@ function ProductCard({ productData }: productCardDataProps) {
         <p>{productData.productName}</p>
         <div className="flex flex-row items-center justify-between">
           <p>{productData.price}$</p>
-          <div
-            className="flex flex-row items-center justify-center stars"
-            ref={stars}
-          >
-            <h6 className="text-lg pr-2">{productData.rating}</h6>
-            <div className="relative">
-              <div className="smallStar"></div>
-              <div className="star absolute top-0 left-0"></div>
-            </div>
-            <div className="relative">
-              <div className="smallStar"></div>
-              <div className="star absolute top-0 left-0"></div>
-            </div>
-            <div className="relative">
-              <div className="smallStar"></div>
-              <div className="star absolute top-0 left-0"></div>
-            </div>
-            <div className="relative">
-              <div className="smallStar"></div>
-              <div className="star absolute top-0 left-0"></div>
-            </div>
-            <div className="relative">
-              <div className="smallStar"></div>
-              <div className="star absolute top-0 left-0"></div>
+          <div className="flex flex-row items-center justify-start space-x-1">
+            <h6 className="text-lg pt-1">{productData.rating}</h6>
+            <div
+              className="flex flex-row items-center justify-center stars"
+              ref={stars}
+            >
+              <div className="relative">
+                <div className="smallStar"></div>
+                <div className="star absolute top-0 left-0"></div>
+              </div>
+              <div className="relative">
+                <div className="smallStar"></div>
+                <div className="star absolute top-0 left-0"></div>
+              </div>
+              <div className="relative">
+                <div className="smallStar"></div>
+                <div className="star absolute top-0 left-0"></div>
+              </div>
+              <div className="relative">
+                <div className="smallStar"></div>
+                <div className="star absolute top-0 left-0"></div>
+              </div>
+              <div className="relative">
+                <div className="smallStar"></div>
+                <div className="star absolute top-0 left-0"></div>
+              </div>
             </div>
           </div>
+
           <CartMessage message={message} />
           <div className="btn font-bold flex-col space-y-1 flex items-center justify-center absolute top-0 w-full h-3/4 duration-200 transition">
             <button

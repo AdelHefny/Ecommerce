@@ -82,7 +82,7 @@
   );
   width: 20px;
   height: 20px;
-  background-image: linear-gradient(to right, yellow 50%, white 50%);
+  background-image: linear-gradient(to right, rgb(255, 178, 34) 50%, white 50%);
 }
 .yellowStar {
   clip-path: polygon(
@@ -99,5 +99,16 @@
   );
   width: 20px;
   height: 20px;
-  background-image: linear-gradient(to right, yellow 100%, black 0%);
+  background-image: linear-gradient(to right, rgb(255, 178, 34) 100%, black 0%);
+}
+.productsTitle::after {
+  content: "";
+  position: absolute;
+  background-color: orange;
+  bottom: 0;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 50%;
+  height: 3px;
+  border-radius: 50%;
 }

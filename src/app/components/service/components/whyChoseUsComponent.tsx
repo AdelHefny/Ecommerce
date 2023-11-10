@@ -40,14 +40,19 @@ function WhyChooseUsComponent() {
   };
   return (
     <section className="flex flex-col items-center justify-center space-y-12 py-20">
-      <h1 className="font-extrabold text-4xl">Why Choose Us</h1>
+      <h1 className="relative font-extrabold text-4xl py-2 whyUsTitle">
+        Why Choose Us
+      </h1>
       <section className="flex md:flex-row sm:flex-col md:space-y-0 sm:space-y-6 items-center justify-center sm:space-x-0 md:space-x-6">
         {services.map((ele) => (
           <ServceCard serviceData={ele} key={ele.id} />
         ))}
       </section>
       <section className="w-full relative customers flex flex-col items-center justify-center space-y-7 py-20">
-        <h1 className="font-extrabold text-center" style={{ fontSize: "36px" }}>
+        <h1
+          className="relative font-extrabold text-center py-2 customersTitle"
+          style={{ fontSize: "36px" }}
+        >
           What Says Our Customers
         </h1>
         <div className="overflow-x-hidden w-full min-h-96">

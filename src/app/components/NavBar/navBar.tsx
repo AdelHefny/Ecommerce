@@ -107,7 +107,7 @@ function NavBar() {
             >
               <button
                 type="button"
-                className="absolute top-4 right-6"
+                className="absolute top-4 right-6 w-8 h-8"
                 onClick={() => {
                   setShowCartToolTip(false);
                 }}

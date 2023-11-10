@@ -55,3 +55,25 @@
   z-index: -1;
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0% 50%);
 }
+.whyUsTitle::after {
+  content: "";
+  position: absolute;
+  background-color: orange;
+  bottom: 0;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 50%;
+  height: 3px;
+  border-radius: 50%;
+}
+.customersTitle::after {
+  content: "";
+  position: absolute;
+  background-color: orange;
+  bottom: 0;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 50%;
+  height: 3px;
+  border-radius: 50%;
+}
