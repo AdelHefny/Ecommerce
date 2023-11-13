@@ -8,7 +8,7 @@ import { productData } from "./CartProducts";
 
 type productCardDataProps = {
   productData: productData;
-  handleDisplayingMsg: () => {};
+  handleDisplayingMsg: () => Promise<void>;
 };
 function ProductCard({
   productData,

@@ -31,8 +31,8 @@ function ProductsComponent({ children }: { children: React.JSX.Element }) {
           {products.map((ele) => (
             <ProductCard
               productData={ele}
-              key={ele.id}
               handleDisplayingMsg={handleDisplayingMsg}
+              key={ele.id}
             />
           ))}
         </section>

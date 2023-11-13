@@ -22,7 +22,7 @@ export default function RootLayout({
   function cartSetter(product: productData, decrease: boolean) {
     let isThere = false;
     cartProducts.forEach((ele) => {
-      ele.productName == product.productName ? (isThere = true) : null;
+      ele.id == product.id ? (isThere = true) : null;
     });
     if (isThere) {
       cartProducts.forEach((ele, index) => {
