@@ -1,15 +1,26 @@
 "use client";
 import { products } from "../components/products/data";
 import FilterNav from "./filterNav";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import ProductCard from "../components/products/ProductCard";
 import "../globals.css";
+import CartMessage from "../components/products/cartMessage";
 
 /* not completed need to put some filtering features  */
 
 function Products() {
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [state, setState] = useState(0);
+  const message = useRef<HTMLDivElement>(null);
+  const handleDisplayingMsg = async () => {
+    message.current?.classList.remove("opacity-0");
+    message.current?.classList.remove("hidden");
+    await new Promise(() => {
+      setTimeout(() => {
+        message.current?.classList.add("opacity-0");
+      }, 2000);
+    });
+  };
   const handleSortingByPrice = (highToLow: boolean) => {
     let filteringProducts = filteredProducts;
     if (highToLow) {
@@ -37,7 +48,8 @@ function Products() {
     setState(state + 1);
   };
   return (
-    <main className="mx-auto w-fit">
+    <main className="relative mx-auto w-fit">
+      <CartMessage message={message} />
       <div className="flex flex-col items-center justify-around py-12">
         <section>
           <h1
@@ -50,7 +62,11 @@ function Products() {
         <FilterNav handleSortingByPrice={handleSortingByPrice} />
         <section className="productGrid justify-center">
           {filteredProducts.map((ele) => (
-            <ProductCard productData={ele} key={ele.id} />
+            <ProductCard
+              handleDisplayingMsg={handleDisplayingMsg}
+              productData={ele}
+              key={ele.id}
+            />
           ))}
         </section>
       </div>
