@@ -7,6 +7,7 @@ function CartMessage({ message }: { message: RefObject<HTMLDivElement> }) {
     <div
       className="fixed text-lg opacity-0 transition duration-300 rounded-lg bottom-4 right-2 bg-green-700 py-4 z-50 text-white flex items-center justify-between"
       ref={message}
+      onClick={() => {}}
     >
       <button
         className="px-4"

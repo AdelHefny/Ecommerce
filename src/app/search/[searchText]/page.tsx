@@ -13,11 +13,15 @@ function Search({ params }: { params: any }) {
   useEffect(() => {
     let searchedProducts: productData[] = [];
     for (let i = 0; i < products.length; i++) {
-      if (products[i].productName.toLowerCase().includes(params.searchText)) {
+      if (
+        products[i].productName
+          .toLowerCase()
+          .includes(params.searchText.toLowerCase())
+      ) {
         searchedProducts.push(products[i]);
       } else {
         products[i].category.map((ele) => {
-          if (ele == params.searchText) {
+          if (ele.includes(params.searchText.toLowerCase())) {
             searchedProducts.push(products[i]);
           }
         });

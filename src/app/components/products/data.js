@@ -65,7 +65,7 @@ export const products = [
     image: soundSystem,
     productName: "Sound System",
     companyName: "Base",
-    category: ["sound", "headPhones"],
+    category: ["sound", "headPhones", "Base"],
     desctiprion:
       "Introducing the Lumina Nova Smart Desk Lamp - your perfect companion for brightening up your workspace or cozy reading nook! This sleek and stylish lamp seamlessly combines modern design with cutting-edge technology to enhance your lighting experience.The Lumina Nova Smart Desk Lamp features adjustable brightness levels and color temperatures, allowing you to create the ideal ambiance for any occasion. Whether you need a focused, cool white light for working on important tasks or a warm, soft glow for winding down after a long day, this lamp has got you covered.",
     price: 345,
@@ -78,7 +78,7 @@ export const products = [
     image: controler,
     productName: "Ps4 Controler",
     companyName: "Sony",
-    category: ["Sony"],
+    category: ["Sony", "ps4"],
     desctiprion:
       "Introducing the Lumina Nova Smart Desk Lamp - your perfect companion for brightening up your workspace or cozy reading nook! This sleek and stylish lamp seamlessly combines modern design with cutting-edge technology to enhance your lighting experience.The Lumina Nova Smart Desk Lamp features adjustable brightness levels and color temperatures, allowing you to create the ideal ambiance for any occasion. Whether you need a focused, cool white light for working on important tasks or a warm, soft glow for winding down after a long day, this lamp has got you covered.",
     price: 39,
@@ -91,7 +91,7 @@ export const products = [
     image: drone2,
     productName: "Short Range Drone",
     companyName: "Drone Company",
-    category: ["camera", "drone"],
+    category: ["camera", "drone", "Drone Company"],
     desctiprion:
       "Introducing the Lumina Nova Smart Desk Lamp - your perfect companion for brightening up your workspace or cozy reading nook! This sleek and stylish lamp seamlessly combines modern design with cutting-edge technology to enhance your lighting experience.The Lumina Nova Smart Desk Lamp features adjustable brightness levels and color temperatures, allowing you to create the ideal ambiance for any occasion. Whether you need a focused, cool white light for working on important tasks or a warm, soft glow for winding down after a long day, this lamp has got you covered.",
     price: 299,

@@ -39,6 +39,7 @@ function SearchBar() {
         placeholder="Search here..."
         className="rounded-md	p-2 text-lg w-64 max-w-full focus:placeholder:opacity-0 text-black outline-yellow-400"
         height={40}
+        id="search"
         ref={input}
         onKeyDown={(e) => {
           if (e.key == "Enter") {
@@ -50,11 +51,15 @@ function SearchBar() {
           }
         }}
       />
+      <label htmlFor="search" className="hidden">
+        search through products
+      </label>
       <Link
         className="bg-yellow-400 rounded-e-md h-11 w-10 -translate-x-2 hover:bg-yellow-500 items-center flex justify-center"
         href={`/search/${input.current?.value}`}
         type="button"
         ref={searchBtn}
+        aria-label="Search among products here"
       >
         <FontAwesomeIcon icon={faMagnifyingGlass} size="xs" />
       </Link>

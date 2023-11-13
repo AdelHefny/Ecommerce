@@ -60,10 +60,12 @@ function Footer() {
             <h1 className="text-2xl">Newsletter</h1>
             <input
               type="search"
+              id={"newSettler"}
               placeholder="Search here..."
               className="rounded-sm	p-2 px-4 text-md w-52 text-black outline-blue-400"
               height={40}
             />
+            <label htmlFor="newSettler">new settler email input</label>
             <button className="p-2 text-white h-11 rounded-md bg-yellow-500 hover:bg-yellow-400 w-3/4">
               Subscribe
             </button>

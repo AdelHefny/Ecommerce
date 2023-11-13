@@ -21,6 +21,9 @@
 .btn {
   opacity: 0;
 }
+.btn:hover {
+  opacity: 1;
+}
 .btn button {
   background-color: rgb(250 204 21);
   font-size: 1rem;

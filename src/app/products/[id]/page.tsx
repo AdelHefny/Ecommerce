@@ -36,6 +36,15 @@ function ProductPage({ params }: { params: any }) {
       }, 2000);
     });
   };
+  const handleDisplayingMsg = async () => {
+    message.current?.classList.remove("opacity-0");
+    message.current?.classList.remove("hidden");
+    await new Promise(() => {
+      setTimeout(() => {
+        message.current?.classList.add("opacity-0");
+      }, 2000);
+    });
+  };
   useEffect(() => {
     let simalerProductsD: productData[] = [];
     for (let i = 0; i < products.length; i++) {
@@ -145,7 +154,11 @@ function ProductPage({ params }: { params: any }) {
       </h1>
       <section className="grid productsGrid items-center justify-center my-8">
         {simalerProducts.map((ele) => (
-          <ProductCard productData={ele} key={ele.id} />
+          <ProductCard
+            productData={ele}
+            handleDisplayingMsg={handleDisplayingMsg}
+            key={ele.id}
+          />
         ))}
       </section>
     </section>
