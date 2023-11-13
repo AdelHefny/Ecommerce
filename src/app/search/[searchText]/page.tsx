@@ -2,14 +2,25 @@
 import { products } from "@/app/components/products/data";
 import FilterNav from "@/app/products/filterNav";
 import "@/app/globals.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { productData } from "@/app/components/products/CartProducts";
 import ProductCard from "@/app/components/products/ProductCard";
 import "@/app/products/[id]/productPage.css";
+import CartMessage from "@/app/components/products/cartMessage";
 
 function Search({ params }: { params: any }) {
   const [filteredProducts, setFilteredProducts] = useState<productData[]>([]);
   const [state, setState] = useState(0);
+  const message = useRef<HTMLDivElement>(null);
+  const handleDisplayingMsg = async () => {
+    message.current?.classList.remove("opacity-0");
+    message.current?.classList.remove("hidden");
+    await new Promise(() => {
+      setTimeout(() => {
+        message.current?.classList.add("opacity-0");
+      }, 2000);
+    });
+  };
   useEffect(() => {
     let searchedProducts: productData[] = [];
     for (let i = 0; i < products.length; i++) {
@@ -62,9 +73,14 @@ function Search({ params }: { params: any }) {
         <span className="text-orange-500 text-lg">{params.searchText}</span>
       </h1>
       <FilterNav handleSortingByPrice={handleSortingByPrice} />
+      <CartMessage message={message} />
       <section className="productsGrid items-center justify-center my-8">
         {filteredProducts.map((ele) => (
-          <ProductCard productData={ele} key={ele.id} />
+          <ProductCard
+            handleDisplayingMsg={handleDisplayingMsg}
+            productData={ele}
+            key={ele.id}
+          />
         ))}
       </section>
     </section>
