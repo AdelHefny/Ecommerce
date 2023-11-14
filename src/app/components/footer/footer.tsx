@@ -80,8 +80,7 @@ function Footer() {
         </div>
         <div className="border-white flex py-4 justify-center items-center copyRights">
           <h1>
-            © {new Date().getFullYear()} All Rights Reserved By Free Html
-            Templates
+            © {new Date().getFullYear()} All Rights Reserved By Company Name
           </h1>
         </div>
       </div>
