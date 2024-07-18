@@ -22,7 +22,7 @@ function FrontPage() {
           resolve("");
         }, 200);
       });
-    }, 5000);
+    }, 5000 );
     return () => clearInterval(intervalId);
   }, [frontProducts]);
   // make the front page change products auto

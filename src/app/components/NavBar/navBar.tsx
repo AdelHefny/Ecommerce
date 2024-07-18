@@ -120,7 +120,7 @@ function NavBar() {
         </div>
       </div>
       <div
-        className={`px-6 py-4 h- flex flex-col h-16 ${show ? "h-64" : ""}`}
+        className={`px-6 py-4 flex flex-col h-16 ${show ? "h-64" : ""}`}
         style={{ backgroundColor: "#3a4468", transition: "400ms" }}
       >
         <div>
